@@ -1,0 +1,27 @@
+COMMON:
+  BROWSER: gc
+  URL: https://www.enterlands.com/auth/login
+
+LOGIN:
+  SIGNUP: XPath=//a[text()="Sign Up"]
+  LOGIN: //button[contains(text(),'Login')]
+
+REGISTER:
+  EMAIL: XPath=//input[@id='email']
+  PASSWORD: XPath=//input[@id='password']
+  CONFIRM_PASSWORD: XPath=//input[@id='passwordRepeat']
+  FIRST_NAME: XPath=//input[@id='firstName']
+  LAST_NAME: XPath=//input[@id='lastName']
+  CHECKBOX_AGREE: XPath=//label[@class='custom-control-label']
+  CREATE_ACCOUNT: XPath=//button[text()=" CREATE ACCOUNT"]
+
+CHANGE_PASSWORD:
+  Tap: XPath=//div[contains(text(),'Change Password')]
+  Menu_Profile: XPath=//div[@class="header-wrap"]/div/button[@class="btn btn-label-primary widget16"]
+  Profile: XPath=//div[@class="portlet portlet-scroll border-0"]/div[@class="portlet-body p-0"]/div[@class="grid-nav grid-nav-flush grid-nav-action grid-nav-no-rounded"]/div[@class="grid-nav-row"]/div[@class="grid-nav-item"]
+  Current_Password: XPath=//input[@id='password']
+  New_Password: XPath=//input[@name="newPassword"]
+  Comfirm_Password: XPath=//input[@name="confirmPassword"]
+  Save_Change: XPath=//button[contains(text(),'Save Change')]
+  Popup: XPath=//div[@id='swal2-content']
+  OK_Popup: XPath=//button[contains(text(),'OK')]

@@ -1,0 +1,69 @@
+COMMON:
+  BROWSER: gc
+  URL: http://202.129.207.12:24343/auth/login
+
+LOGIN:
+  SIGNUP: XPath=//a[text()="Sign Up"]
+  LOGIN: Xpath=//button[@type="submit"][text()=" Login"]
+
+REGISTER:
+  EMAIL: XPath=//input[@id='email']
+  PASSWORD: XPath=//input[@id='password']
+  CONFIRM_PASSWORD: XPath=//input[@id='passwordRepeat']
+  FIRST_NAME: XPath=//input[@id='firstName']
+  LAST_NAME: XPath=//input[@id='lastName']
+  CHECKBOX_AGREE: XPath=//label[@class='custom-control-label']
+  CREATE_ACCOUNT: XPath=//button[text()=" CREATE ACCOUNT"]
+
+CHANGE_PASSWORD:
+  Tap: XPath=//div[contains(text(),'Change Password')]
+  Menu_Profile: XPath=//div[@class="header-wrap"]/div/button[@class="btn btn-label-primary widget16"]
+  Profile: XPath=//div[@class="portlet portlet-scroll border-0"]/div[@class="portlet-body p-0"]/div[@class="grid-nav grid-nav-flush grid-nav-action grid-nav-no-rounded"]/div[@class="grid-nav-row"]/div[@class="grid-nav-item"]
+  Current_Password: XPath=//input[@id='password']
+  New_Password: XPath=//input[@name="newPassword"]
+  Comfirm_Password: XPath=//input[@name="confirmPassword"]
+  Save_Change: XPath=//button[contains(text(),'Save Change')]
+  Popup: XPath=//div[@id='swal2-content']
+  OK_Popup: XPath=//button[contains(text(),'OK')]
+
+EDIT_PF:
+  Menu_Profile: XPath=//div[@class="header-wrap"]/div/button[@class="btn btn-label-primary widget16"]
+  Tap_Profile: XPath=//div[@class="portlet portlet-scroll border-0"]/../..//div[@class="grid-nav-item"]
+  Update_BT: XPath=//button[@id="submit"]
+  Education_bt: XPath=//button[contains(text(),'ADD EDUCATIONAL')]
+  Experience_bt: XPath=//button[contains(text(),'ADD EXPERIENCE')]
+  Skill_bt: XPath=//button[contains(text(),'ADD SKILL')]
+  Interest_bt: //button[contains(text(),'add interests')]
+  Guild_bt: XPath=//button[contains(text(),'add guild')]
+  Submit: XPath=//button[contains(text(),'Submit')]
+  Close: XPath=//button[@class="swal2-close"]
+
+Create_Guild:
+  Submit: XPath=//button[contains(text(),'Submit')]
+
+EVENT:
+  Event_Menu: XPath=//a[@href="/event"]
+  Open_Popup_Create: XPath=//div[@class="rbc-month-view"]/div[2]/div[1]/div[4]
+  Add_Button: XPath= //div[@class="modal-content"]/div/div[3]/div[1]/button
+  Event_Name: XPath= //div[@class="event-name"]/div/div/div/div[2]
+  Emoji_Name: XPath= //div[@class="event-name"]/div/button[@class="react-input-emoji--button"]
+  Select_Emoji: XPath= //div[@class="event-name"]/div/div[2]/div/div/section/div[2]/section[2]/ul/li[1]
+  Click_Color: XPath= //div[@class="modal-body p-4 modal-dialog-scrollable modal-content"]/form/div[1]/div/div[1]/button
+  Close_Color: XPath= //div[class="modal-content"]
+  Select_Color: XPath= //div[@class="modal-body p-4 modal-dialog-scrollable modal-content"]/form/div[1]/div/div[1]/div[1]/div[2]/div[4]/div[1]
+  Click_Location: XPath= //div[@class="modal-body p-4 modal-dialog-scrollable modal-content""]
+  Location: XPath= //div[@class="form-group"]/div/textarea[@id="location"]
+  Click_upload_photo: XPath= //div[@class="card image-upload-card shadow mb-3"]/div/div/div
+  Click_StartDT: XPath= //div[@class="input-group-icon"]/span[@class="p-calendar p-component p-inputwrapper p-inputwrapper-filled"]/input[@name="startDate"]
+  Select_StartDT: XPath= //div[@class="p-datepicker-group-container"]/div/div[2]/table/tbody/tr[5]/td[5]
+  Click_StartTime: XPath= //div[@class="event-form-create col-5"]/div/div/span/input[@name="startTime"]
+  Select_StartTime: Xpath= //div[@class="p-timepicker"]/div[1]/button[1]/span[1]
+  Click_EndDT: XPath= //div[@class="input-group-icon"]/span[@class="p-calendar p-component p-inputwrapper p-inputwrapper-filled"]/input[@name="endDate"]
+  Select_EndDT: XPath= //div[@class="p-datepicker-group-container"]/div/div[2]/table/tbody/tr[5]/td[4]
+  Description: XPath= //div[@class="description"]/div/div/div/div[2]
+  Click_EmojiDes: XPath= //div[@class="description"]/div/button
+  Select_EmojiDes: XPath= //div[@class="description"]/div/div[2]/div/div/section/div[2]/section[2]/ul/li[4]
+  Click_Guild: XPath= //div[@role="combobox"]/div[1]
+  Select_Guild: XPath= //div[@role="combobox"]/div[2]/div[2]
+  Select_Tag: XPath= //div[@class="ui active visible fluid multiple search selection upward dropdown customize-tag-ds"]/div[2]/div[5]
+  Private: XPath= //div[@class="p-inputswitch p-component p-inputswitch-checked"]/span

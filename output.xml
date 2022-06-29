@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220629 19:33:46.041" rpa="false" schemaversion="3">
+<suite id="s1" name="T-Create Event" source="D:\Enterland\Automate Test\T-Create_Event.robot">
+<kw name="SETUP Script" library="CreateEvent" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${COMMON.URL}</arg>
+<arg>${COMMON.BROWSER}</arg>
+<arg>option=ignore-certificate-errors</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220629 19:33:46.805" level="INFO">Opening browser 'gc' to base url 'http://202.129.207.12:24343/auth/login'.</msg>
+<status status="PASS" starttime="20220629 19:33:46.804" endtime="20220629 19:33:48.629"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220629 19:33:48.630" endtime="20220629 19:33:48.774"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220629 19:33:48.774" endtime="20220629 19:33:48.775"/>
+</kw>
+<status status="PASS" starttime="20220629 19:33:46.804" endtime="20220629 19:33:48.775"/>
+</kw>
+<test id="s1-t1" name="TC3 - Create Event" line="18">
+<kw name="LOGIN account Success" library="CreateEvent">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.EMAIL}</arg>
+<arg>thanyarat.j@entronica.co.th</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220629 19:33:48.779" level="INFO">Typing text 'thanyarat.j@entronica.co.th' into text field 'XPath=//input[@id='email']'.</msg>
+<status status="PASS" starttime="20220629 19:33:48.777" endtime="20220629 19:33:50.402"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.PASSWORD}</arg>
+<arg>1234567</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220629 19:33:50.403" level="INFO">Typing text '1234567' into text field 'XPath=//input[@id='password']'.</msg>
+<status status="PASS" starttime="20220629 19:33:50.402" endtime="20220629 19:33:52.011"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN.LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220629 19:33:52.012" level="INFO">Clicking button 'Xpath=//button[@type="submit"][text()=" Login"]'.</msg>
+<status status="PASS" starttime="20220629 19:33:52.011" endtime="20220629 19:33:54.625"/>
+</kw>
+<status status="PASS" starttime="20220629 19:33:48.777" endtime="20220629 19:33:54.625"/>
+</kw>
+<kw name="Go to Menu" library="CreateEvent">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[@href="/event"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220629 19:33:54.626" endtime="20220629 19:33:55.750"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>//a[@href="/event"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220629 19:33:55.750" level="INFO">Clicking link '//a[@href="/event"]'.</msg>
+<status status="PASS" starttime="20220629 19:33:55.750" endtime="20220629 19:33:57.341"/>
+</kw>
+<status status="PASS" starttime="20220629 19:33:54.625" endtime="20220629 19:33:57.341"/>
+</kw>
+<kw name="Create Event" library="CreateEvent">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Open_Popup_Create}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220629 19:33:57.343" level="INFO">Clicking element 'XPath=//div[@class="rbc-month-view"]/div[2]/div[1]/div[4]'.</msg>
+<status status="PASS" starttime="20220629 19:33:57.342" endtime="20220629 19:33:58.499"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EVENT.Event_Name}</arg>
+<arg>Test Robot Create Guild</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220629 19:33:58.500" level="INFO">Typing text 'Test Robot Create Guild' into text field 'XPath= //div[@class="event-name"]/div/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20220629 19:33:58.499" endtime="20220629 19:34:00.536"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${EVENT.Emoji_Name}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220629 19:34:00.537" level="INFO">Clicking button 'XPath= //div[@class="event-name"]/div/button[@class="react-input-emoji--button"]'.</msg>
+<status status="PASS" starttime="20220629 19:34:00.536" endtime="20220629 19:34:03.245"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EVENT.Select_Emoji}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220629 19:34:03.245" endtime="20220629 19:34:04.270"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Select_Emoji}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220629 19:34:04.271" level="INFO">Clicking element 'XPath= //div[@class="event-name"]/div/div[2]/div/div/section/div[2]/section[2]/ul/li[1]'.</msg>
+<status status="PASS" starttime="20220629 19:34:04.270" endtime="20220629 19:34:05.357"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${EVENT.Click_Color}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220629 19:34:05.358" level="INFO">Clicking button 'XPath= //div[@class="modal-body p-4 modal-dialog-scrollable modal-content"]/form/div[1]/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20220629 19:34:05.357" endtime="20220629 19:34:08.007"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Select_Color}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220629 19:34:08.008" level="INFO">Clicking element 'XPath= //div[@class="modal-body p-4 modal-dialog-scrollable modal-content"]/form/div[1]/div/div[1]/div[1]/div[2]/div[4]/div[1]'.</msg>
+<status status="PASS" starttime="20220629 19:34:08.007" endtime="20220629 19:34:09.057"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Private}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220629 19:34:09.058" level="INFO">Clicking element 'XPath= //div[@class="p-inputswitch p-component p-inputswitch-checked"]/span'.</msg>
+<msg timestamp="20220629 19:34:11.298" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-74.png"&gt;&lt;img src="selenium-screenshot-74.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220629 19:34:11.299" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="p-inputswitch-slider"&gt;&lt;/span&gt; is not clickable at point (1081, 257). Other element would receive the click: &lt;div style="position: fixed; inset: 0px;"&gt;&lt;/div&gt;
+  (Session info: chrome=103.0.5060.53)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00D96463+2188387]
+	Ordinal0 [0x00D2E461+1762401]
+	Ordinal0 [0x00C43D78+802168]
+	Ordinal0 [0x00C77F9B+1015707]
+	Ordinal0 [0x00C75F68+1007464]
+	Ordinal0 [0x00C73C6B+998507]
+	Ordinal0 [0x00C729D9+993753]
+	Ordinal0 [0x00C68613+951827]
+	Ordinal0 [0x00C8C7DC+1099740]
+	Ordinal0 [0x00C67FF4+950260]
+	Ordinal0 [0x00C8C9F4+1100276]
+	Ordinal0 [0x00C9CC22+1166370]
+	Ordinal0 [0x00C8C5F6+1099254]
+	Ordinal0 [0x00C66BE0+945120]
+	Ordinal0 [0x00C67AD6+948950]
+	GetHandleVerifier [0x010371F2+2712546]
+	GetHandleVerifier [0x0102886D+2652765]
+	GetHandleVerifier [0x00E2002A+520730]
+	GetHandleVerifier [0x00E1EE06+516086]
+	Ordinal0 [0x00D3468B+1787531]
+	Ordinal0 [0x00D38E88+1805960]
+	Ordinal0 [0x00D38F75+1806197]
+	Ordinal0 [0x00D41DF1+1842673]
+	BaseThreadInitThunk [0x77A5FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77D67A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77D67A6E+238]
+</msg>
+<status status="FAIL" starttime="20220629 19:34:09.057" endtime="20220629 19:34:11.301"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EVENT.Location}</arg>
+<arg>Test Robot Create Guild</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.302" endtime="20220629 19:34:11.302"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Click_upload_photo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.302" endtime="20220629 19:34:11.302"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${EVENT.Click_upload_photo}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.302" endtime="20220629 19:34:11.302"/>
+</kw>
+<kw name="Typewrite" library="pyautogui">
+<arg>we.jpg</arg>
+<doc>Performs a keyboard key press down, followed by a release, for each of
+the characters in message.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.302" endtime="20220629 19:34:11.302"/>
+</kw>
+<kw name="Key Down" library="pyautogui">
+<arg>'enter'</arg>
+<doc>Performs a keyboard key press without the release. This will put that
+key in a held down state.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.302" endtime="20220629 19:34:11.302"/>
+</kw>
+<kw name="Press Combination" library="ImageHorizonLibrary">
+<arg>Key.enter</arg>
+<doc>Press given keyboard keys.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.302" endtime="20220629 19:34:11.303"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Click_StartDT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.303" endtime="20220629 19:34:11.303"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Select_StartDT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.303" endtime="20220629 19:34:11.303"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Click_StartTime}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.303" endtime="20220629 19:34:11.303"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Select_StartTime}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.303" endtime="20220629 19:34:11.303"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Click_EndDT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.303" endtime="20220629 19:34:11.303"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Select_EndDT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.303" endtime="20220629 19:34:11.303"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Tag')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.303" endtime="20220629 19:34:11.303"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EVENT.Description}</arg>
+<arg>Test Robot Create Guild</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.303" endtime="20220629 19:34:11.303"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Click_EmojiDes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.303" endtime="20220629 19:34:11.303"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EVENT.Click_EmojiDes}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.304" endtime="20220629 19:34:11.304"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Select_EmojiDes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.304" endtime="20220629 19:34:11.304"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Click_Guild}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.304" endtime="20220629 19:34:11.304"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Select_Guild}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.304" endtime="20220629 19:34:11.304"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Tag')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.304" endtime="20220629 19:34:11.304"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Tag')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.304" endtime="20220629 19:34:11.304"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${EVENT.Select_Tag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.304" endtime="20220629 19:34:11.304"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${EVENT.Add_Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220629 19:34:11.304" endtime="20220629 19:34:11.304"/>
+</kw>
+<status status="FAIL" starttime="20220629 19:33:57.341" endtime="20220629 19:34:11.305"/>
+</kw>
+<status status="FAIL" starttime="20220629 19:33:48.775" endtime="20220629 19:34:11.306">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="p-inputswitch-slider"&gt;&lt;/span&gt; is not clickable at point (1081, 257). Other element would receive the click: &lt;div style="position: fixed; inset: 0px;"&gt;&lt;/div&gt;
+  (Session info: chrome=103.0.5060.53)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00D96463+2188387]
+	Ordinal0 [0x00D2E461+1762401]
+	Ordinal0 [0x00C43D78+802168]
+	Ordinal0 [0x00C77F9B+1015707]
+	Ordinal0 [0x00C75F68+1007464]
+	Ordinal0 [0x00C73C6B+998507]
+	Ordinal0 [0x00C729D9+993753]
+	Ordinal0 [0x00C68613+951827]
+	Ordinal0 [0x00C8C7DC+1099740]
+	Ordinal0 [0x00C67FF4+950260]
+	Ordinal0 [0x00C8C9F4+1100276]
+	Ordinal0 [0x00C9CC22+1166370]
+	Ordinal0 [0x00C8C5F6+1099254]
+	Ordinal0 [0x00C66BE0+945120]
+	Ordinal0 [0x00C67AD6+948950]
+	GetHandleVerifier [0x010371F2+2712546]
+	GetHandleVerifier [0x0102886D+2652765]
+	GetHandleVerifier [0x00E2002A+520730]
+	GetHandleVerifier [0x00E1EE06+516086]
+	Ordinal0 [0x00D3468B+1787531]
+	Ordinal0 [0x00D38E88+1805960]
+	Ordinal0 [0x00D38F75+1806197]
+	Ordinal0 [0x00D41DF1+1842673]
+	BaseThreadInitThunk [0x77A5FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77D67A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77D67A6E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20220629 19:33:46.043" endtime="20220629 19:34:11.311"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="T-Create Event">T-Create Event</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
